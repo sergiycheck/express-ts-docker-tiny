@@ -12,10 +12,14 @@ services:
     env_file:
       - ./.env
     environment:
+      - migrateDevArg=1
       - PG_DB_HOST=postgress_db
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
     restart: always
     depends_on:
       - postgress_db
+    command: sh -c './entrypoint.sh'
   postgress_db:
     image: postgres
     restart: always

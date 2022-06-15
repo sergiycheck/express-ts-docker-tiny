@@ -12,7 +12,8 @@ EXPOSE 5002
 
 RUN apt-get update && \ 
   apt-get -y dist-upgrade && \
+  apt-get install -y postgresql-client && \
   sh -c 'env' && \
-  npm run build
+  chmod 755 entrypoint.sh
 
-CMD [ "npm", "run", "start:prod" ]
+CMD [ "npm", "run", "build" ]

@@ -1,6 +1,14 @@
 shell scripting
 {
 https://www.shellscript.sh/quickref.html
+
+echo >&2 meaning
+https://stackoverflow.com/questions/23489934/echo-2-some-text-what-does-it-mean-in-shell-scripting
+
+explanation of numbers ->1 or 3 in >&2 command
+file descriptors
+https://www.computerhope.com/jargon/f/file-descriptor.htm#:~:text=A%20file%20descriptor%20is%20a,Grants%20access.
+
 }
 
 docker working express app
