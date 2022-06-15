@@ -1,0 +1,37 @@
+shell scripting
+{
+https://www.shellscript.sh/quickref.html
+}
+
+docker working express app
+{
+https://github.com/docker/getting-started/tree/master/app/src
+}
+
+tutorial (build express with ts)
+https://dev.to/maithanhdanh/create-express-typescript-boilerplate-3gf
+
+Running Custom Scripts In Docker With Arguments – ENTRYPOINT Vs CMD
+https://devopscube.com/run-scripts-docker-arguments/
+
+GIT HELPFUL COMMANDS
+{
+For all unstaged files in current working directory use:
+
+git restore .
+
+Another quicker way is:
+
+git stash save --keep-index --include-untracked
+
+}
+
+TODO: know remote address with nginx & morgan after waiting for postgres ready
+{
+Fix Morgan logging with Docker and Nginx
+https://offhourscoding.com/what-is-my-ip/
+
+[optional] config winston
+https://www.digitalocean.com/community/tutorials/how-to-use-winston-to-log-node-js-applications
+
+}
