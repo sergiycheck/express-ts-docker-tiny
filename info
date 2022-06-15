@@ -43,3 +43,10 @@ https://offhourscoding.com/what-is-my-ip/
 https://www.digitalocean.com/community/tutorials/how-to-use-winston-to-log-node-js-applications
 
 }
+
+DOCKER official docs {
+
+startup order
+https://docs.docker.com/compose/startup-order/
+
+}

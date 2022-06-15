@@ -12,6 +12,7 @@ services:
     env_file:
       - ./.env
     environment:
+      - PORT=5002
       - migrateDevArg=1
       - PG_DB_HOST=postgress_db
       - POSTGRES_PASSWORD=postgres
