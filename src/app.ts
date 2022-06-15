@@ -23,7 +23,7 @@ const createServer = (): express.Application => {
   app.use(morgan('combined', { stream: accessLogStream }));
 
   app.get('/health', (_req, res) => {
-    res.json({ message: 'up and working' });
+    res.json({ message: 'up and working!' });
   });
 
   app.get('/', (_req, res) => {
