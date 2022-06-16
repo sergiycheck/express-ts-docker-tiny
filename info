@@ -9,6 +9,9 @@ explanation of numbers ->1 or 3 in >&2 command
 file descriptors
 https://www.computerhope.com/jargon/f/file-descriptor.htm#:~:text=A%20file%20descriptor%20is%20a,Grants%20access.
 
+How To Bash Shell Find Out If a Variable Is Empty Or Not
+https://www.cyberciti.biz/faq/unix-linux-bash-script-check-if-variable-is-empty/
+
 }
 
 docker working express app
@@ -48,5 +51,14 @@ DOCKER official docs {
 
 startup order
 https://docs.docker.com/compose/startup-order/
+
+postgres info {
+https://github.com/docker-library/docs/blob/master/postgres/README.md
+}
+
+it is highly discouraged to use env variables for
+production
+link
+https://diogomonica.com/2017/03/27/why-you-shouldnt-use-env-variables-for-secret-data/
 
 }
