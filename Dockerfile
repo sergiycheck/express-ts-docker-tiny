@@ -2,10 +2,13 @@ FROM node:16
 
 WORKDIR /home/node/app
 
+# layers caching
 COPY package*.json ./
 
 RUN npm install
 
+# copy all files that are not listed in .dockerignore
+# layers caching
 COPY . .
 
 EXPOSE 5002

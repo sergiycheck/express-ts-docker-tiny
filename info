@@ -49,6 +49,8 @@ https://www.digitalocean.com/community/tutorials/how-to-use-winston-to-log-node-
 
 DOCKER official docs {
 
+###
+
 startup order
 https://docs.docker.com/compose/startup-order/
 
@@ -60,5 +62,20 @@ it is highly discouraged to use env variables for
 production
 link
 https://diogomonica.com/2017/03/27/why-you-shouldnt-use-env-variables-for-secret-data/
+
+find vulnerabilities with snyk
+https://app.snyk.io/org/sergiycheck
+
+you can also configure Docker Hub to scan all newly pushed images automatically
+
+https://docs.docker.com/docker-hub/vulnerability-scanning/
+
+###
+
+}
+
+nano helpful {
+copy/paste in nano
+https://askubuntu.com/questions/833102/copy-only-copy-not-cutting-in-nano
 
 }
