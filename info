@@ -70,6 +70,10 @@ you can also configure Docker Hub to scan all newly pushed images automatically
 
 https://docs.docker.com/docker-hub/vulnerability-scanning/
 
+enable buildkit
+
+DOCKER_BUILDKIT=1 docker build .
+
 ###
 
 }

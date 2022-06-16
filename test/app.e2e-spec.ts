@@ -1,12 +1,20 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
 import * as request from 'supertest';
 import * as express from 'express';
 import createServer from '../src/app';
 
+import { sequelize } from '../src/sequelize.config';
+
 describe('GET /user', function () {
   let app: express.Application;
 
-  beforeAll(() => {
-    app = createServer();
+  beforeAll(async () => {
+    app = await createServer();
+  });
+
+  afterAll(async () => {
+    await sequelize.close();
   });
 
   it('responds with json', async () => {

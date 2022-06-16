@@ -44,4 +44,9 @@ because the owner of pg-db-data is root.
 It actually exists and there is data in there!
 }
 
+error: {
+winston does not logged in docker.
+maybe because of incorrect build
+}
+
 }
