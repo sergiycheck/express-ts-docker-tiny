@@ -28,7 +28,7 @@ const createServer = async (): Promise<express.Application> => {
   app.use(morganLogger);
 
   app.get('/health', (_req, res) => {
-    res.json({ message: 'up and working! yes' });
+    res.json({ message: 'up and working! yes!' });
   });
 
   app.get('/', (_req, res) => {

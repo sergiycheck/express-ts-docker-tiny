@@ -83,3 +83,8 @@ copy/paste in nano
 https://askubuntu.com/questions/833102/copy-only-copy-not-cutting-in-nano
 
 }
+
+working tutorial on how to debug nodejs docker container,
+but not source mapped {
+https://blog.risingstack.com/how-to-debug-a-node-js-app-in-a-docker-container/
+}
