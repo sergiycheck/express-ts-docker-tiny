@@ -1,7 +1,7 @@
-import * as dotenv from 'dotenv';
+import dotenv from 'dotenv';
 dotenv.config();
-import * as request from 'supertest';
-import * as express from 'express';
+import request from 'supertest';
+import express from 'express';
 import createServer from '../src/app';
 
 import { sequelize } from '../src/sequelize.config';
@@ -24,7 +24,7 @@ describe('GET /user', function () {
       .expect('Content-Type', /json/)
       .expect(200)
       .then((response) => {
-        expect(response.body.message).toBe('up and working!');
+        expect(response.body.message).toBe('up and working! yes!');
       });
   });
 });

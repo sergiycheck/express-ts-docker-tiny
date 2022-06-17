@@ -1,7 +1,7 @@
-import * as dotenv from 'dotenv';
+import dotenv from 'dotenv';
 dotenv.config();
 import { AddressInfo } from 'net';
-import * as http from 'http';
+import http from 'http';
 import createServer from './app';
 import logger from './logger';
 

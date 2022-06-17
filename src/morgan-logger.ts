@@ -1,6 +1,6 @@
-import * as morgan from 'morgan';
-import * as fs from 'fs';
-import * as path from 'path';
+import morgan from 'morgan';
+import fs from 'fs';
+import path from 'path';
 import logsDir from './logs-dir';
 
 const accessLogStream = fs.createWriteStream(

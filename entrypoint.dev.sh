@@ -17,6 +17,6 @@ if [ "$migrateDevArg" = "1" ]; then
   npxoLcation=$(which npx)
   >&1 echo "npx location: $npxoLcation"
 fi
-exec npm run start:dev_doc:debug
+exec npm run start:dev_doc
 
 
