@@ -1,16 +1,14 @@
-FROM node:latest as base
+FROM node:16 as base
 
 WORKDIR /home/node/app
 COPY package*.json ./
 
-FROM base as prod
-RUN npm ci --omit=dev
+FROM base as test
+RUN npm ci
 COPY . .
-EXPOSE 5002
 RUN apt-get update && \ 
   apt-get -y dist-upgrade && \
   apt-get install -y postgresql-client && \
   sh -c 'env' && \
-  chmod 755 entrypoint.sh
+  sh -c 'chmod 755 entrypoint.test.sh'
 VOLUME [ "/home/node/app/logs" ]
-CMD [ "npm", "run", "build" ]

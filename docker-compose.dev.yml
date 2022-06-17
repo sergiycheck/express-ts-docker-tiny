@@ -5,21 +5,23 @@ services:
     container_name: node_app
     build:
       context: .
+      dockerfile: Dockerfile.dev
     ports:
-      - 5002:5002
+      - 5005:5005
+      - 9229:9229
     volumes:
-      - $PWD/logs:/home/node/app/logs
+      - ./:/home/node/app
     env_file:
       - ./.env
     environment:
-      - NODE_ENV=production
-      - PORT=5002
+      - NODE_ENV=development
+      - PORT=5005
       - migrateDevArg=1
       - PG_DB_HOST=postgress_db
     restart: always
     depends_on:
       - postgress_db
-    command: sh -c './entrypoint.sh'
+    command: sh -c './entrypoint.dev.sh'
   postgress_db:
     image: postgres
     restart: always

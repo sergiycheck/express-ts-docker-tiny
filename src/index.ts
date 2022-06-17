@@ -1,14 +1,14 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import { AddressInfo } from 'net';
-import * as http from 'http';
+import http from 'http';
 import createServer from './app';
 import logger from './logger';
-import * as dotenv from 'dotenv';
-dotenv.config();
 
 const port = process.env.PORT || 5002;
 
 async function startServer() {
-  const app = createServer();
+  const app = await createServer();
 
   try {
     const server = http.createServer(app).listen(port, () => {
@@ -16,12 +16,15 @@ async function startServer() {
       logger.info(`Listening on port ${addressInfo.port}`);
     });
   } catch (error) {
-    console.error(error);
+    logger.error('could not create server ', error);
     process.exit(1);
   }
 }
 
-const gracefulShutdown = () => {
+const gracefulShutdown = async () => {
+  logger.info('gracefully shutting down');
+  const { sequelize } = await import('./sequelize.config');
+  await sequelize.close();
   process.exit();
 };
 
