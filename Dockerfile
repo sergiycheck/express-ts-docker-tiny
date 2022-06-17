@@ -1,10 +1,10 @@
-FROM node:16 as base
+FROM node:latest as base
 
 WORKDIR /home/node/app
 COPY package*.json ./
 
 FROM base as prod
-RUN npm ci --production
+RUN npm ci --omit=dev
 COPY . .
 EXPOSE 5002
 RUN apt-get update && \ 
