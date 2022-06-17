@@ -11,9 +11,32 @@
 #run & build docker-compose dev
 # exec docker-compose -f docker-compose.dev.yml up --build
 
+#run & build docker-compose test start
+
+# runs tests and gracefully exit
+
+# Steps
+
+# 1 starting postgres db in network ${__dirname}_default
+# command docker-compose -f docker-compose.test.yml up -d postgress_db_test
+
+# 2 running test command with docker-compose in backend_app_test service
+# command docker-compose -f docker-compose.test.yml run --rm backend_app_test npm run test:e2e
+
+#clean 
+# command docker-compose -f docker-compose.test.yml down --volumes
+
+#run & build docker-compose test end
+
 #run & build docker-compose prod
 # exec docker-compose up --build
 
 #clean
 # exec docker-compose down --volumes
+
+# remove all containers
+# exec docker rm -f $(docker ps -a -q)
+
+#remove all volumes
+# exec docker volume rm $(docker volume ls -q)
 

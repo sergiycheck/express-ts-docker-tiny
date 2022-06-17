@@ -88,3 +88,17 @@ working tutorial on how to debug nodejs docker container,
 but not source mapped {
 https://blog.risingstack.com/how-to-debug-a-node-js-app-in-a-docker-container/
 }
+
+docker unofficial tutorials {
+Testing with Node and Docker Compose, Part 1: On the Backend
+https://jdlm.info/articles/2019/10/19/testing-node-docker-compose-backend.html
+
+TODO Demo
+
+Testing with Node and Docker Compose, Part 1: On the Backend
+Testing with Node and Docker Compose, Part 2: On the Frontend
+Testing with Node and Docker Compose, Part 3: End-to-End
+
+https://github.com/jdleesmiller/todo-demo/tree/master
+
+}
