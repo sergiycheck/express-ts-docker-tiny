@@ -6,10 +6,10 @@ services:
     build:
       context: .
     image: sergiycheck/node_app
-    ports:
-      - 5002:5002
+    # ports:
+    #   - 5002:5002
     volumes:
-      - $PWD/logs:/home/node/app/logs
+      - logs_data:/home/node/app/logs
     environment:
       - NODE_ENV=production
       - PORT=5002
@@ -32,8 +32,10 @@ services:
       POSTGRES_DB: dev
     volumes:
       - pg_db:/var/lib/postgresql/data
-    ports:
-      - 5435:5432
+    # ports:
+    #   - 5435:5432
 volumes:
   pg_db:
+    driver: local
+  logs_data:
     driver: local

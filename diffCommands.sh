@@ -46,10 +46,28 @@
 #access volume created by docker
 # sudo chown -R dev ./pg-db-data
 
+
+
+
+#building for deploy start end
+
 # build image with tag of docker hub repo
 # exec docker build -f Dockerfile -t sergiycheck/node_app .
 
 #push image 
 # exec docker push sergiycheck/node_app
 
-#building for deploy start end
+# set image in docker-compose file
+
+#deploy for ecs start
+
+#use context that configured with aws account 
+# command docker context use myecscontext
+
+# deploy to aws ecs
+command docker compose -f docker-compose.prod.yml up
+
+# revert to use default context
+# command docker context use default
+
+#deploy for ecs end
