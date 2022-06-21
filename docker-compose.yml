@@ -9,14 +9,16 @@ services:
       - backend_app
     restart: always
     ports:
-      - 4044:80
+      - 4044:4000
   backend_app:
-    container_name: node_app
     build:
       context: .
     image: sergiycheck/node_app
-    ports:
-      - 5002:5002
+
+    # remove ports mapping, because we access server from proxy
+    # ports:
+    # - 5002:5002
+
     volumes:
       - $PWD/logs:/home/node/app/logs
     environment:

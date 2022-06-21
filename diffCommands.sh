@@ -65,7 +65,7 @@
 # command docker context use myecscontext
 
 # deploy to aws ecs
-command docker compose -f docker-compose.prod.yml up
+# command docker compose -f docker-compose.prod.yml up
 
 # generate CloudFormation stack
 # command docker compose  -f docker-compose.prod.yml convert > stack.yml
@@ -74,3 +74,7 @@ command docker compose -f docker-compose.prod.yml up
 # command docker context use default
 
 #deploy for ecs end
+
+# run docker compose with proxy and load balancer
+# nginx or other server must be configured!
+# exec docker-compose up --build  --scale backend_app=2
