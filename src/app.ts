@@ -25,7 +25,7 @@ const createServer = async (): Promise<express.Application> => {
   app.disable('x-powered-by');
 
   app.use(errorHandler);
-  app.use(morganLogger);
+  app.use(morganLogger());
 
   app.get('/health', (_req, res) => {
     res.json({ message: 'up and working! yes!' });
