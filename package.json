@@ -1,5 +1,5 @@
 {
-  "name": "wait_for_postgres",
+  "name": "wait-for-postgres",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

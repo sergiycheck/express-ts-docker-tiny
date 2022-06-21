@@ -13,4 +13,7 @@ RUN apt-get update && \
   sh -c 'env' && \
   chmod 755 entrypoint.sh
 VOLUME [ "/home/node/app/logs" ]
+
+STOPSIGNAL SIGINT
+
 CMD [ "npm", "run", "build" ]

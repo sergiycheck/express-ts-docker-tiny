@@ -67,6 +67,9 @@
 # deploy to aws ecs
 command docker compose -f docker-compose.prod.yml up
 
+# generate CloudFormation stack
+# command docker compose  -f docker-compose.prod.yml convert > stack.yml
+
 # revert to use default context
 # command docker context use default
 

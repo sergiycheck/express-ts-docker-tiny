@@ -22,7 +22,4 @@
 **/values.dev.yaml
 pg-db-data
 logs
-
-
-
-
+stack.yml
